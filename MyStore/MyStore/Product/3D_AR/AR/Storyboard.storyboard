@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Kit SceneVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="ARKitSceneVC" customModule="MyStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEo-U6-m0J" customClass="VirtualObjectARView" customModule="MyStore" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arscnView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCB-Lp-619">
+                                <rect key="frame" x="156.5" y="808" width="101" height="46"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ha-2I-lIB">
+                                        <rect key="frame" x="8" y="8" width="85" height="30"/>
+                                        <state key="normal" title="Place object">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZJX-PZ-PfB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3Ha-2I-lIB" secondAttribute="trailing" constant="8" id="6hy-wA-jpz"/>
+                                    <constraint firstItem="3Ha-2I-lIB" firstAttribute="top" secondItem="KCB-Lp-619" secondAttribute="top" constant="8" id="Dea-Jc-YWf"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Ha-2I-lIB" secondAttribute="bottom" constant="8" id="SjV-Lf-iFF"/>
+                                    <constraint firstItem="3Ha-2I-lIB" firstAttribute="leading" secondItem="KCB-Lp-619" secondAttribute="leading" constant="8" id="hh0-SI-jIp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpp-nE-E5R">
+                                <rect key="frame" x="370.5" y="52" width="35.5" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Hj-qo-Jo4">
+                                        <rect key="frame" x="8" y="8" width="19.5" height="22"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="trash.fill" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zg6-5P-f48"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2Hj-qo-Jo4" secondAttribute="bottom" constant="8" id="42U-1a-eiW"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Hj-qo-Jo4" secondAttribute="trailing" constant="8" id="YTe-af-9YN"/>
+                                    <constraint firstItem="2Hj-qo-Jo4" firstAttribute="top" secondItem="hpp-nE-E5R" secondAttribute="top" constant="8" id="Yfs-kS-HQZ"/>
+                                    <constraint firstItem="2Hj-qo-Jo4" firstAttribute="leading" secondItem="hpp-nE-E5R" secondAttribute="leading" constant="8" id="yxR-jf-14m"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hpp-nE-E5R" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="3ne-wM-IPE"/>
+                            <constraint firstItem="hpp-nE-E5R" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" constant="-8" id="AL4-Ri-fSg"/>
+                            <constraint firstItem="LEo-U6-m0J" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="BUr-3h-Wv6"/>
+                            <constraint firstAttribute="bottom" secondItem="LEo-U6-m0J" secondAttribute="bottom" id="cWd-vP-Paw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="KCB-Lp-619" secondAttribute="bottom" constant="8" id="dOx-YO-Ur5"/>
+                            <constraint firstItem="LEo-U6-m0J" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="qPN-ry-PRA"/>
+                            <constraint firstAttribute="trailing" secondItem="LEo-U6-m0J" secondAttribute="trailing" id="rmG-Bn-M3B"/>
+                            <constraint firstItem="KCB-Lp-619" firstAttribute="centerX" secondItem="LEo-U6-m0J" secondAttribute="centerX" id="uKf-U7-HKe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionButtonBackground" destination="KCB-Lp-619" id="vzE-qs-Yxl"/>
+                        <outlet property="clearButtonBackground" destination="hpp-nE-E5R" id="Plk-ld-Apt"/>
+                        <outlet property="sceneView" destination="LEo-U6-m0J" id="Wid-Ny-6QF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="73"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
